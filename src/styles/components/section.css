@@ -1,0 +1,6 @@
+.section {
+  padding: 40px 47px;
+  background: var(--color-background-content);
+  border-radius: 28px;
+  border: 1px solid var(--color-stroke-content);
+}

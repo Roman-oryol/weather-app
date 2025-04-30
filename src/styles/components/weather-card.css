@@ -1,0 +1,128 @@
+.weather-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.weather-card__input {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+
+  width: 100%;
+  padding: 10px 20px;
+  padding-left: 69px;
+  font-size: 1.6rem;
+  line-height: 2;
+  font-weight: normal;
+  color: var(--color-text-input);
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  background-color: var(--color-background-input);
+  background-image: url('../../assets/img/icon-search.svg');
+  background-repeat: no-repeat;
+  background-position: 20px center;
+
+  &::placeholder {
+    color: var(--color-input-placeholder);
+  }
+
+  &:focus {
+    outline: 2px solid var(--color-stroke-input);
+    outline-offset: 2px;
+  }
+}
+
+.weather-card__location {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ffffff;
+}
+
+.weather-card__date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-card__icon img {
+  display: block;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.weather-card__current-temp {
+  font-size: 96px;
+  line-height: 1;
+  font-weight: 600;
+  text-align: center;
+}
+
+.weather-card__minmax > span {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  &::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+  }
+}
+
+.weather-card__max {
+  &::before {
+    background-image: url('../../assets/img/icon-temp-max.svg');
+  }
+}
+
+.weather-card__min {
+  &::before {
+    background-image: url('../../assets/img/icon-temp-min.svg');
+  }
+}
+
+.weather-card__extra {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: var(--color-background-card);
+  border-radius: 12px;
+  box-shadow: var(--shadow-cards);
+}
+
+.weather-card__extra-item {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+
+  &::before {
+    content: '';
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.weather-card__extra-item--humidity {
+  &::before {
+    background-image: url('../../assets/img/icon-humidity.svg');
+  }
+}
+
+.weather-card__extra-item--wind {
+  &::before {
+    background-image: url('../../assets/img/icon-wind-speed.svg');
+  }
+}
+
+.weather-card__extra-content {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  line-height: 1;
+  font-weight: normal;
+}
+
+.weather-card__extra-value {
+}

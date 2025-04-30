@@ -3,7 +3,125 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <title>Weather</title>
   </head>
-  <body></body>
+  <body>
+    <main class="weather-page">
+      <!-- Sidebar: текущая погода -->
+      <aside class="weather-card section">
+        <form class="weather-card__search">
+          <input
+            type="search"
+            placeholder="Поиск населенного пункта..."
+            class="weather-card__input"
+          />
+        </form>
+        <div class="weather-card__main-info">
+          <div class="weather-card__location heading">
+            <p class="weather-card__city">Запорожье</p>
+            <p class="weather-card__date">
+              <span class="day">Понедельник</span
+              ><span class="date">30 апреля</span>
+            </p>
+          </div>
+          <div class="weather-card__icon">
+            <img
+              src="./assets/img/light-rain-day.svg"
+              width="300"
+              height="300"
+              alt="Light rain day"
+            />
+          </div>
+          <div class="weather-card__current-temp">30°C</div>
+        </div>
+        <div class="weather-card__details text-small">
+          <p class="weather-card__desc">Небольшой дождь</p>
+          <p class="weather-card__minmax">
+            <span class="weather-card__max"
+              >Макс.: <span class="weather-card__temp-max">31°C</span></span
+            >
+            <span class="weather-card__min"
+              >Мин.: <span class="weather-card__temp-min">28°C</span></span
+            >
+          </p>
+        </div>
+        <div class="weather-card__extra">
+          <div
+            class="weather-card__extra-item weather-card__extra-item--humidity"
+          >
+            <p class="weather-card__extra-content">
+              <span class="weather-card__extra-value text-large">83 %</span
+              >Влажность
+            </p>
+          </div>
+          <div class="weather-card__extra-item weather-card__extra-item--wind">
+            <p class="weather-card__extra-content">
+              <span class="weather-card__extra-value text-large">6 м/с</span
+              >Скорость ветра
+            </p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Основной контент -->
+      <section class="weather-overview section">
+        <!-- Навигация по дням -->
+        <nav class="forecast-tabs">
+          <button class="forecast-tabs__btn forecast-tabs__btn--active">
+            Today
+          </button>
+          <button class="forecast-tabs__btn">Week</button>
+        </nav>
+
+        <!-- Список прогнозов на неделю -->
+        <ul class="forecast-list">
+          <li class="forecast-list__item">
+            <p>Sun</p>
+            <!-- <img src="icon-sun-wind.png" alt="Sunny with wind" /> -->
+            <p>32°</p>
+          </li>
+          <!-- остальные дни -->
+        </ul>
+
+        <!-- Панель с текущими показателями -->
+        <div class="overview-panel">
+          <div class="overview-panel__item">
+            <h3>Air Quality Index</h3>
+            <p class="overview-panel__value">53</p>
+            <p class="overview-panel__label">Good</p>
+          </div>
+          <div class="overview-panel__item">
+            <h3>UV Index</h3>
+            <p class="overview-panel__value">3</p>
+            <p class="overview-panel__label">Moderate</p>
+          </div>
+          <div class="overview-panel__item">
+            <h3>Pressure (hpa)</h3>
+            <p class="overview-panel__value">1006</p>
+            <p class="overview-panel__label">Normal</p>
+          </div>
+        </div>
+
+        <!-- График осадков -->
+        <div class="precipitation-chart">
+          <h3>Precipitation</h3>
+          <!-- Вставка canvas или SVG -->
+          <canvas id="precipitationChart"></canvas>
+        </div>
+
+        <!-- Время восхода и заката -->
+        <div class="sunrise-sunset">
+          <h3>Sunrise & Sunset</h3>
+          <p>🌅 Sunrise: 7:06 AM</p>
+          <p>🌇 Sunset: 7:03 PM</p>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

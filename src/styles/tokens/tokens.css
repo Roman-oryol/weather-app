@@ -1,3 +1,44 @@
-html {
-  font-size: 62.5%;
+:root {
+  --font-primary: 'Plus Jakarta Sans', sans-serif;
+
+  --font-size-header: 2.4rem;
+  --line-height-header: 1.5;
+  --font-weight-header: normal;
+
+  --font-size-text-1: 2.4rem;
+  --line-height-text-1: auto;
+  --font-weigth-text-1: 600;
+
+  --font-size-text-2: 1.8rem;
+  --line-height-text-2: 2;
+  --font-weight-text-2: 500;
+
+  /* Gradiends */
+
+  --gradient-content: linear-gradient(
+    to bottom right,
+    rgb(255 255 255 / 10%) 10%,
+    rgb(153 153 153 / 10%) 80%
+  );
+
+  /* Colors */
+
+  --color-background: #191b1f;
+  --color-background-content: var(--gradient-content);
+  --color-background-card: rgb(37 34 34 / 65%);
+  --color-text: #ffffff;
+  --color-text-secondary: #6a6969;
+  --color-text-input: #252222;
+  --color-input-placeholder: #7e7c7c;
+  --color-background-input: #c2d4d3;
+
+  /* Shadows */
+
+  --shadow-cards: 2px 4px 5px 0 rgb(0 0 0 / 25%);
+
+  /* Strokes */
+
+  --color-stroke-content: rgb(255 255 255 / 10%);
+  --color-stroke-card: rgb(0 0 0 / 10%);
+  --color-stroke-input: #f5cd2f;
 }

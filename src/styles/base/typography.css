@@ -1,0 +1,26 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-text);
+}
+
+.heading {
+  font-size: var(--font-size-header);
+  line-height: var(--line-height-header);
+  font-weight: var(--font-weight-header);
+}
+
+.text-large {
+  font-size: var(--font-size-text-1);
+  line-height: var(--line-height-text-1);
+  font-weight: var(--font-weigth-text-1);
+}
+
+.text-small {
+  font-size: var(--font-size-text-2);
+  line-height: var(--line-height-text-2);
+  font-weight: var(--font-weight-text-2);
+}

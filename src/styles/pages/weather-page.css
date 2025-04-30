@@ -1,0 +1,8 @@
+.weather-page {
+  display: grid;
+  grid-template-columns: 452px 938px;
+  column-gap: 20px;
+  width: 1440px;
+  margin: 0 auto;
+  padding: 15px;
+}

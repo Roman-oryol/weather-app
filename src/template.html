@@ -32,7 +32,7 @@
           </div>
           <div class="weather-card__icon">
             <img
-              src="./assets/img/light-rain-day.svg"
+              src="./assets/img/weather-icons/windy-sunny2x.png"
               width="300"
               height="300"
               alt="Light rain day"
@@ -72,21 +72,141 @@
       <!-- Основной контент -->
       <section class="weather-overview section">
         <!-- Навигация по дням -->
-        <nav class="forecast-tabs">
+        <!-- <nav class="forecast-tabs">
           <button class="forecast-tabs__btn forecast-tabs__btn--active">
             Today
           </button>
           <button class="forecast-tabs__btn">Week</button>
-        </nav>
+        </nav> -->
 
         <!-- Список прогнозов на неделю -->
         <ul class="forecast-list">
-          <li class="forecast-list__item">
-            <p>Sun</p>
-            <!-- <img src="icon-sun-wind.png" alt="Sunny with wind" /> -->
-            <p>32°</p>
+          <li class="forecast-list__item weather-day weather-day--active">
+            <p class="weather-day__weekday text-small">Пн</p>
+            <p class="weather-day__date">
+              <span class="weather-day__day text-large">29</span>
+              <span class="weather-day__month">апреля</span>
+            </p>
+            <div class="weather-day__icon"></div>
+            <div class="weather-day__temperatures">
+              <div class="weather-day__temp">
+                <span class="weather-day__label">Мин.</span>
+                <span class="weather-day__temp-min">18°</span>
+              </div>
+              <div class="weather-day__temp">
+                <span class="weather-day__label">Макс.</span>
+                <span class="weather-day__temp-max">32°</span>
+              </div>
+            </div>
           </li>
-          <!-- остальные дни -->
+          <li class="forecast-list__item weather-day">
+            <p class="weather-day__weekday text-small">Вт</p>
+            <p class="weather-day__date">
+              <span class="weather-day__day text-large">30</span>
+              <span class="weather-day__month">апреля</span>
+            </p>
+            <div class="weather-day__icon"></div>
+            <div class="weather-day__temperatures">
+              <div class="weather-day__temp">
+                <span class="weather-day__label">Мин.</span>
+                <span class="weather-day__temp-min">18°</span>
+              </div>
+              <div class="weather-day__temp">
+                <span class="weather-day__label">Макс.</span>
+                <span class="weather-day__temp-max">32°</span>
+              </div>
+            </div>
+          </li>
+          <li class="forecast-list__item weather-day">
+            <p class="weather-day__weekday text-small">Ср</p>
+            <p class="weather-day__date">
+              <span class="weather-day__day text-large">01</span>
+              <span class="weather-day__month">мая</span>
+            </p>
+            <div class="weather-day__icon"></div>
+            <div class="weather-day__temperatures">
+              <div class="weather-day__temp">
+                <span class="weather-day__label">Мин.</span>
+                <span class="weather-day__temp-min">18°</span>
+              </div>
+              <div class="weather-day__temp">
+                <span class="weather-day__label">Макс.</span>
+                <span class="weather-day__temp-max">32°</span>
+              </div>
+            </div>
+          </li>
+          <li class="forecast-list__item weather-day">
+            <p class="weather-day__weekday text-small">Чт</p>
+            <p class="weather-day__date">
+              <span class="weather-day__day text-large">02</span>
+              <span class="weather-day__month">мая</span>
+            </p>
+            <div class="weather-day__icon"></div>
+            <div class="weather-day__temperatures">
+              <div class="weather-day__temp">
+                <span class="weather-day__label">Мин.</span>
+                <span class="weather-day__temp-min">18°</span>
+              </div>
+              <div class="weather-day__temp">
+                <span class="weather-day__label">Макс.</span>
+                <span class="weather-day__temp-max">32°</span>
+              </div>
+            </div>
+          </li>
+          <li class="forecast-list__item weather-day">
+            <p class="weather-day__weekday text-small">Пт</p>
+            <p class="weather-day__date">
+              <span class="weather-day__day text-large">03</span>
+              <span class="weather-day__month">мая</span>
+            </p>
+            <div class="weather-day__icon"></div>
+            <div class="weather-day__temperatures">
+              <div class="weather-day__temp">
+                <span class="weather-day__label">Мин.</span>
+                <span class="weather-day__temp-min">18°</span>
+              </div>
+              <div class="weather-day__temp">
+                <span class="weather-day__label">Макс.</span>
+                <span class="weather-day__temp-max">32°</span>
+              </div>
+            </div>
+          </li>
+          <li class="forecast-list__item weather-day">
+            <p class="weather-day__weekday text-small">Сб</p>
+            <p class="weather-day__date">
+              <span class="weather-day__day text-large">04</span>
+              <span class="weather-day__month">мая</span>
+            </p>
+            <div class="weather-day__icon"></div>
+            <div class="weather-day__temperatures">
+              <div class="weather-day__temp">
+                <span class="weather-day__label">Мин.</span>
+                <span class="weather-day__temp-min">18°</span>
+              </div>
+              <div class="weather-day__temp">
+                <span class="weather-day__label">Макс.</span>
+                <span class="weather-day__temp-max">32°</span>
+              </div>
+            </div>
+          </li>
+          <li class="forecast-list__item weather-day">
+            <p class="weather-day__weekday text-small">Вс</p>
+            <p class="weather-day__date">
+              <span class="weather-day__day text-large">05</span>
+              <span class="weather-day__month">мая</span>
+            </p>
+            <div class="weather-day__icon"></div>
+            <div class="weather-day__temperatures">
+              <div class="weather-day__temp">
+                <span class="weather-day__label">Мин.</span>
+                <span class="weather-day__temp-min">18°</span>
+              </div>
+              <div class="weather-day__temp">
+                <span class="weather-day__label">Макс.</span>
+                <span class="weather-day__temp-max">32°</span>
+              </div>
+            </div>
+          </li>
         </ul>
 
         <!-- Панель с текущими показателями -->

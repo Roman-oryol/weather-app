@@ -6,8 +6,11 @@
 @import './base/typography.css';
 
 @import './pages/weather-page.css';
+
 @import './components/section.css';
 @import './components/weather-card.css';
+@import './components/weather-day.css';
+@import './components/forecast-list.css';
 
 html {
   height: 100%;

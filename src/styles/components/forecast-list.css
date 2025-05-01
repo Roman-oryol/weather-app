@@ -1,0 +1,14 @@
+.forecast-list {
+  display: flex;
+  column-gap: 15px;
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+  list-style: none;
+}
+
+.forecast-list__item {
+  width: calc((100% - (6 * 15px)) / 7);
+  flex-shrink: 0;
+  text-align: center;
+}

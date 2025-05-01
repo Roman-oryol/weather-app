@@ -1,0 +1,63 @@
+.weather-day {
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--color-stroke-card);
+  background-color: var(--color-background-card);
+  box-shadow: var(--shadow-cards);
+}
+
+.weather-day--active {
+  transform: scale(1.1);
+  background-color: var(--color-background);
+}
+
+.weather-day__weekday {
+  margin-bottom: 5px;
+}
+
+.weather-day__date {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+
+  span {
+    line-height: var(--line-height-small);
+  }
+}
+
+.weather-day__month {
+  font-size: 1.6rem;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.weather-day__icon {
+  width: 70px;
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
+  background: url('../../assets/img/weather-icons/light-rain-day.png') no-repeat;
+  background-size: cover;
+}
+
+.weather-day__temperatures {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-day__temp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-day__temp > span:last-child {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.weather-day__label {
+  font-size: 1.2rem;
+  line-height: 1.15;
+  margin-bottom: 5px;
+  opacity: 0.6;
+}

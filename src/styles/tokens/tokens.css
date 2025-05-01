@@ -13,8 +13,7 @@
   --line-height-text-2: 2;
   --font-weight-text-2: 500;
 
-  /* Gradiends */
-
+  --line-height-small: 1.2; /* Gradiends */
   --gradient-content: linear-gradient(
     to bottom right,
     rgb(255 255 255 / 10%) 10%,

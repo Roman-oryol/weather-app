@@ -9,6 +9,7 @@ import {
   renderCurrentData,
   renderUserLocation,
 } from './currentSectionUI';
+import { renderWeeklyOverview } from './weeklyOverviewUI';
 
 const searchForm = document.querySelector('.weather-card__search');
 const searchInput = searchForm.querySelector('.weather-card__input');
@@ -19,10 +20,6 @@ const getUserLocationInput = async () => {
   return location;
 };
 
-function renderWeeklyOverview(days) {
-  // рисует карточки на 7 дней (возможно, включая сегодня)
-}
-
 function renderDayDetails(dayData) {
   // подробности по выбранному дню: температура по часам, осадки и пр.
 }
@@ -31,6 +28,7 @@ const renderAll = (weather) => {
   renderUserLocation(weather.address);
   renderCurrentData();
   renderCurrentConditions(weather);
+  renderWeeklyOverview(weather.days);
 };
 
 const handleSearch = async (event) => {
@@ -46,6 +44,7 @@ const handleSearch = async (event) => {
 const renderAppWithLocation = async (location) => {
   const rawData = await getWeatherData(location);
   const weather = await extractWeatherInfo(rawData);
+  console.log(weather); // ! For Delate
   renderAll(weather);
 };
 

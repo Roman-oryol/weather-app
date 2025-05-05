@@ -4,11 +4,14 @@
   border: 1px solid var(--color-stroke-card);
   background-color: var(--color-background-card);
   box-shadow: var(--shadow-cards);
+  cursor: pointer;
 }
 
 .weather-day--active {
   transform: scale(1.1);
   background-color: var(--color-background);
+
+  cursor: not-allowed;
 }
 
 .weather-day__weekday {
@@ -18,7 +21,7 @@
 .weather-day__date {
   display: flex;
   flex-direction: column;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 
   span {
     line-height: var(--line-height-small);
@@ -32,11 +35,13 @@
 }
 
 .weather-day__icon {
-  width: 70px;
+  margin-bottom: 15px;
+}
+
+.weather-day__icon img {
+  display: block;
   margin: 0 auto;
-  aspect-ratio: 1 / 1;
-  background: url('../../assets/img/weather-icons/light-rain-day.png') no-repeat;
-  background-size: cover;
+  object-fit: contain;
 }
 
 .weather-day__temperatures {

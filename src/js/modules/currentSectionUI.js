@@ -3,8 +3,6 @@ import { createFormattedDate } from '../utils/utils';
 import { weatherIcons } from '../utils/weatherIcons';
 
 const currentWeatherSection = document.querySelector('.weather-card');
-// const searchForm = currentWeatherSection.querySelector('.weather-card__search');
-// const searchInput = searchForm.querySelector('.weather-card__input');
 const locationEl = currentWeatherSection.querySelector('.weather-card__city');
 const currentDayEl = currentWeatherSection.querySelector(
   '.weather-card__date .day',

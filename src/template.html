@@ -13,7 +13,6 @@
   </head>
   <body>
     <main class="weather-page">
-      <!-- Sidebar: текущая погода -->
       <aside class="weather-card section">
         <form class="weather-card__search">
           <input
@@ -30,7 +29,12 @@
             </p>
           </div>
           <div class="weather-card__icon">
-            <img src="#" width="250" height="250" alt="Light rain day" />
+            <img
+              src="./assets/img/progress-download.svg"
+              width="250"
+              height="250"
+              alt="Light rain day"
+            />
           </div>
           <div class="weather-card__current-temp"><span>--</span>°C</div>
         </div>
@@ -69,17 +73,7 @@
         </div>
       </aside>
 
-      <!-- Основной контент -->
       <section class="weather-overview section">
-        <!-- Навигация по дням -->
-        <!-- <nav class="forecast-tabs">
-          <button class="forecast-tabs__btn forecast-tabs__btn--active">
-            Today
-          </button>
-          <button class="forecast-tabs__btn">Week</button>
-        </nav> -->
-
-        <!-- Список прогнозов на неделю -->
         <ul class="forecast-list">
           <li class="forecast-list__item weather-day weather-day--active">
             <p class="weather-day__weekday text-small">Пн</p>
@@ -87,7 +81,14 @@
               <span class="weather-day__day text-large">29</span>
               <span class="weather-day__month">апреля</span>
             </p>
-            <div class="weather-day__icon"></div>
+            <div class="weather-day__icon">
+              <img
+                src="./assets/img/progress-download.svg"
+                width="70"
+                height="70"
+                alt=""
+              />
+            </div>
             <div class="weather-day__temperatures">
               <div class="weather-day__temp">
                 <span class="weather-day__label">Мин.</span>
@@ -105,7 +106,14 @@
               <span class="weather-day__day text-large">30</span>
               <span class="weather-day__month">апреля</span>
             </p>
-            <div class="weather-day__icon"></div>
+            <div class="weather-day__icon">
+              <img
+                src="./assets/img/progress-download.svg"
+                width="70"
+                height="70"
+                alt=""
+              />
+            </div>
             <div class="weather-day__temperatures">
               <div class="weather-day__temp">
                 <span class="weather-day__label">Мин.</span>
@@ -123,7 +131,14 @@
               <span class="weather-day__day text-large">01</span>
               <span class="weather-day__month">мая</span>
             </p>
-            <div class="weather-day__icon"></div>
+            <div class="weather-day__icon">
+              <img
+                src="./assets/img/progress-download.svg"
+                width="70"
+                height="70"
+                alt=""
+              />
+            </div>
             <div class="weather-day__temperatures">
               <div class="weather-day__temp">
                 <span class="weather-day__label">Мин.</span>
@@ -141,7 +156,14 @@
               <span class="weather-day__day text-large">02</span>
               <span class="weather-day__month">мая</span>
             </p>
-            <div class="weather-day__icon"></div>
+            <div class="weather-day__icon">
+              <img
+                src="./assets/img/progress-download.svg"
+                width="70"
+                height="70"
+                alt=""
+              />
+            </div>
             <div class="weather-day__temperatures">
               <div class="weather-day__temp">
                 <span class="weather-day__label">Мин.</span>
@@ -159,7 +181,14 @@
               <span class="weather-day__day text-large">03</span>
               <span class="weather-day__month">мая</span>
             </p>
-            <div class="weather-day__icon"></div>
+            <div class="weather-day__icon">
+              <img
+                src="./assets/img/progress-download.svg"
+                width="70"
+                height="70"
+                alt=""
+              />
+            </div>
             <div class="weather-day__temperatures">
               <div class="weather-day__temp">
                 <span class="weather-day__label">Мин.</span>
@@ -177,7 +206,14 @@
               <span class="weather-day__day text-large">04</span>
               <span class="weather-day__month">мая</span>
             </p>
-            <div class="weather-day__icon"></div>
+            <div class="weather-day__icon">
+              <img
+                src="./assets/img/progress-download.svg"
+                width="70"
+                height="70"
+                alt=""
+              />
+            </div>
             <div class="weather-day__temperatures">
               <div class="weather-day__temp">
                 <span class="weather-day__label">Мин.</span>
@@ -195,7 +231,14 @@
               <span class="weather-day__day text-large">05</span>
               <span class="weather-day__month">мая</span>
             </p>
-            <div class="weather-day__icon"></div>
+            <div class="weather-day__icon">
+              <img
+                src="./assets/img/progress-download.svg"
+                width="70"
+                height="70"
+                alt=""
+              />
+            </div>
             <div class="weather-day__temperatures">
               <div class="weather-day__temp">
                 <span class="weather-day__label">Мин.</span>
@@ -226,13 +269,6 @@
             <p class="overview-panel__value">1006</p>
             <p class="overview-panel__label">Normal</p>
           </div>
-        </div>
-
-        <!-- График осадков -->
-        <div class="precipitation-chart">
-          <h3>Precipitation</h3>
-          <!-- Вставка canvas или SVG -->
-          <canvas id="precipitationChart"></canvas>
         </div>
 
         <!-- Время восхода и заката -->

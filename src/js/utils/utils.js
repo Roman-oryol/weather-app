@@ -4,7 +4,13 @@ import { ru } from 'date-fns/locale';
 const parseDate = (dateString) => new Date(dateString);
 
 const getFormattedWeekday = (dateString, short = false) => {
-  return format(parseDate(dateString), short ? 'EEE' : 'EEEE', { locale: ru });
+  if (short) {
+    const weekdaysShort = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
+    const date = parseDate(dateString);
+    return weekdaysShort[date.getDay()];
+  }
+
+  return format(parseDate(dateString), 'EEEE', { locale: ru });
 };
 
 const getFormattedDayMonth = (dateString) => {
@@ -24,4 +30,4 @@ const createFormattedDate = (dateString) => {
   };
 };
 
-export { createFormattedDate };
+export { createFormattedDate, getFormattedWeekday };

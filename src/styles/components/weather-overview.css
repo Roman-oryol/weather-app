@@ -1,0 +1,7 @@
+.weather-overview {
+  display: grid;
+  grid-template-rows: auto auto 470px;
+  align-content: space-between;
+  height: 100%;
+  padding-top: 10px;
+}

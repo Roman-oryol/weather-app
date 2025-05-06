@@ -49,14 +49,20 @@ const renderCurrentData = () => {
   currentDateEl.textContent = `${day} ${month}`;
 };
 
-const renderCurrentConditions = (data) => {
+const renderCurrentConditions = (data, isFahrenheit = false) => {
+  const KMH_TO_MS = 1 / 3.6;
+  const MPH_TO_MS = 0.44704;
+  const unit = isFahrenheit ? '°F' : '°C';
+
   iconEl.src = weatherIcons[data.currentConditions.icon];
-  currentTemp.textContent = data.currentConditions.temp;
+  currentTemp.textContent = Math.round(data.currentConditions.temp) + unit;
   currentConditionsEl.textContent = data.currentConditions.conditions;
-  currentDayMaxTempEl.textContent = data.days[0].tempmax;
-  currentDayMinTempEl.textContent = data.days[0].tempmin;
-  currentHumidityEl.textContent = data.currentConditions.humidity;
-  currentWindEl.textContent = data.currentConditions.windSpeed;
+  currentDayMaxTempEl.textContent = Math.round(data.days[0].tempmax) + unit;
+  currentDayMinTempEl.textContent = Math.round(data.days[0].tempmin) + unit;
+  currentHumidityEl.textContent = Math.round(data.currentConditions.humidity);
+  currentWindEl.textContent = (
+    data.currentConditions.windSpeed * (isFahrenheit ? MPH_TO_MS : KMH_TO_MS)
+  ).toFixed(1);
 };
 
 export { renderCurrentConditions, renderCurrentData, renderUserLocation };

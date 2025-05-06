@@ -10,10 +10,13 @@
 @import './components/section.css';
 @import './components/weather-card.css';
 @import './components/weather-day.css';
+@import './components/weather-overview.css';
 @import './components/forecast-list.css';
+@import './components/day-overview.css';
+@import './components/toggle-units.css';
 
 html {
-  height: 100%;
+  height: 100vh;
 }
 
 body {

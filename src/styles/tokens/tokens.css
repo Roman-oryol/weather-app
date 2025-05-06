@@ -13,7 +13,10 @@
   --line-height-text-2: 2;
   --font-weight-text-2: 500;
 
-  --line-height-small: 1.2; /* Gradiends */
+  --line-height-small: 1.2;
+
+  /* Gradiends */
+
   --gradient-content: linear-gradient(
     to bottom right,
     rgb(255 255 255 / 10%) 10%,
@@ -24,12 +27,14 @@
 
   --color-background: #191b1f;
   --color-background-content: var(--gradient-content);
-  --color-background-card: rgb(37 34 34 / 65%);
+  --color-background-card: rgb(37 34 34 / 55%);
   --color-text: #ffffff;
   --color-text-secondary: #6a6969;
   --color-text-input: #252222;
   --color-input-placeholder: #7e7c7c;
   --color-background-input: #c2d4d3;
+  --color-scrollbar-thumb: #7e7c7c;
+  --color-scrollbar-track: #252222;
 
   /* Shadows */
 

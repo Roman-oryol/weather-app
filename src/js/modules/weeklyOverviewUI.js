@@ -1,5 +1,6 @@
 import { createFormattedDate } from '../utils/utils';
 import { weatherIcons } from '../utils/weatherIcons';
+import { renderDayDetails } from './dayDetailsUI';
 
 const weeklyForecastList = document.querySelector('.forecast-list');
 const dailyOverviews = weeklyForecastList.querySelectorAll(
@@ -16,11 +17,14 @@ const setActiveDay = (dayEl) => {
   });
 };
 
-const handleChooseDay = (e) => {
-  if (e.target.closest('.forecast-list__item')) {
-    const selectedDay = e.target.closest('.forecast-list__item');
-    setActiveDay(selectedDay);
-  }
+const handleChooseDay = (e, dayObj) => {
+  const selectedDay = e.target.closest('.forecast-list__item');
+  const selectedDate = selectedDay.dataset.date;
+  setActiveDay(selectedDay);
+  renderDayDetails(dayObj);
+
+  console.log(selectedDate);
+  console.log(dayObj);
 };
 
 const renderDayOverview = (dayOverviewEl, dayObj) => {
@@ -33,12 +37,22 @@ const renderDayOverview = (dayOverviewEl, dayObj) => {
   const tempMinEl = dayOverviewEl.querySelector('.weather-day__temp-min');
   const tempMaxEl = dayOverviewEl.querySelector('.weather-day__temp-max');
 
+  if (dayOverviewEl._clickHandler) {
+    dayOverviewEl.removeEventListener('click', dayOverviewEl._clickHandler);
+  }
+
+  const clickHandler = (e) => handleChooseDay(e, dayObj);
+  dayOverviewEl._clickHandler = clickHandler;
+
+  dayOverviewEl.addEventListener('click', clickHandler);
+
+  dayOverviewEl.dataset.date = datetime;
   weekdayEl.textContent = weekdayShort;
   dayEl.textContent = day;
   monthEl.textContent = month;
   weatherIcon.src = weatherIcons[icon];
-  tempMinEl.textContent = tempmin;
-  tempMaxEl.textContent = tempmax;
+  tempMinEl.textContent = Math.round(tempmin);
+  tempMaxEl.textContent = Math.round(tempmax);
 };
 
 const renderWeeklyOverview = (daysArr) => {
@@ -46,7 +60,5 @@ const renderWeeklyOverview = (daysArr) => {
     renderDayOverview(dayOverview, daysArr[index]);
   });
 };
-
-weeklyForecastList.addEventListener('click', handleChooseDay);
 
 export { renderWeeklyOverview };

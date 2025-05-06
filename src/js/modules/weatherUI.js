@@ -1,7 +1,5 @@
-import { startOfToday } from 'date-fns';
 import { getWeatherData } from './weatherApi';
 import { extractWeatherInfo } from './weatherParser';
-import { createFormattedDate } from '../utils/utils';
 import { getUserLocation } from './locationService';
 import { geocodeCity } from './geocoder';
 import {
@@ -10,6 +8,8 @@ import {
   renderUserLocation,
 } from './currentSectionUI';
 import { renderWeeklyOverview } from './weeklyOverviewUI';
+import { renderDayDetails } from './dayDetailsUI';
+import { updateUnitToggleHandler } from './toggleUnits';
 
 const searchForm = document.querySelector('.weather-card__search');
 const searchInput = searchForm.querySelector('.weather-card__input');
@@ -20,15 +20,12 @@ const getUserLocationInput = async () => {
   return location;
 };
 
-function renderDayDetails(dayData) {
-  // подробности по выбранному дню: температура по часам, осадки и пр.
-}
-
-const renderAll = (weather) => {
+const renderAll = (weather, isFahrenheit = false) => {
   renderUserLocation(weather.address);
   renderCurrentData();
-  renderCurrentConditions(weather);
+  renderCurrentConditions(weather, isFahrenheit);
   renderWeeklyOverview(weather.days);
+  renderDayDetails(weather.days[0], isFahrenheit);
 };
 
 const handleSearch = async (event) => {
@@ -39,21 +36,25 @@ const handleSearch = async (event) => {
   const weather = await extractWeatherInfo(rawData);
 
   renderAll(weather);
+  updateUnitToggleHandler(location);
 };
 
 const renderAppWithLocation = async (location) => {
   const rawData = await getWeatherData(location);
   const weather = await extractWeatherInfo(rawData);
-  console.log(weather); // ! For Delate
   renderAll(weather);
+  console.log(rawData);
 };
 
 const initUI = async () => {
   const location = await getUserLocation();
 
   renderAppWithLocation(location);
+  updateUnitToggleHandler(location);
 };
 
 initUI();
 
 searchForm.addEventListener('submit', handleSearch);
+
+export { renderAll };

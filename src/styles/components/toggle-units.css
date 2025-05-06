@@ -1,0 +1,23 @@
+.unit-toggle {
+  display: flex;
+  justify-content: center;
+}
+
+.unit-toggle__button {
+  background-color: var(--color-background-card);
+  color: var(--color-text);
+  border: 1px solid var(--color-stroke-content);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: var(--font-size-text-2);
+  font-weight: var(--font-weight-text-2);
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.unit-toggle__button:hover {
+  background-color: var(--color-text);
+  color: var(--color-background);
+}
